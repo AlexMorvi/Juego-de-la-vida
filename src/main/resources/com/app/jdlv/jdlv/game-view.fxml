@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.canvas.Canvas?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.app.jdlv.jdlv.GameController">
+
+    <Label text="El juego de la vida"/>
+    <Label text="Por: Alexander Morales"/>
+    <Label text="--------------------------------------------------------------"/>
+    <Label fx:id="gridSizeLabel" text="Tamaño de la Cuadrícula: 0x0"/>
+    <Label text="--------------------------------------------------------------"/>
+    <Label text="Tamaño de la Cuadrícula (alto x ancho):"/>
+    <TextField fx:id="heightInput" promptText="Alto (por ej. 20)" minWidth="200" maxWidth="200" prefWidth="200"/>
+    <TextField fx:id="widthInput" promptText="Ancho (por ej. 20)" minWidth="200" maxWidth="200" prefWidth="200"/>
+    <Button fx:id="applySizeButton" text="Aplicar Tamaño" onAction="#applySize"/>
+    <Label text="--------------------------------------------------------------"/>
+    <Label fx:id="generationCounter" text="Generación: 0"/>
+    <Label text="--------------------------------------------------------------"/>
+    <Canvas fx:id="gameCanvas" width="400" height="400"/>
+    <Button fx:id="nextGenerationButton" text="Siguiente Generación" onAction="#nextGeneration"/>
+    <Button fx:id="resetButton" text="Reiniciar Juego" onAction="#resetGame"/>
+</VBox>
